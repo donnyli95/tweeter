@@ -1,16 +1,38 @@
 nav {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Bungee', sans-serif;
   height: 120px;
   width: 100vw;
   background-color: #4056A1;
   color: #FFFF;
-  display: flex;
-  z-index: -1;
-  position: relative;
-
+  position: fixed;
+  top: 0;
+  padding: 0 1.5em;
+  align-items: center;
 }
 
-span {
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+
+
+.prompt-container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+  align-items: center;
+}
+
+.double-down-arrow {
+  color: red;
+}
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+
+a {
+  color: #FFFF;
 }

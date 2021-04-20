@@ -6,6 +6,7 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <!-- Google Fonts -->
     <!-- Bungee, 400 -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
@@ -18,33 +19,107 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/existing-tweets.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/responsive.css" type="text/css"/>
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Time A Go function -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/document-ready.js"></script>
+
+    
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
-      <span>Write a new tweet</span>
-      <i class="fas fa-angle-double-down"></i>
+        <span>tweeter</span>
+        <div class="prompt-container">
+          <a href="#compose-new-tweet"><b>Write</b> a new tweet</a>
+          <i class="fas fa-angle-double-down fa-spin double-down-arrow"></i>
+        </div>
     </nav>
 
-    <header>
-      <div>
+    <header class="page-header">
+      <div class="avatar-pic">
         <img src="images/profile-hex.png">
       </div>
       <br>
       <div>
-        <h2>Your Name</h2>
+        <h2>Donny <span class="last-name">Li</span></h2>
       </div>
     </header>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet" id="compose-new-tweet">
+        <h2 class="title">Compose Tweet</h2>
+        <p class="hidden-errors empty-tweet"><i class="fas fa-exclamation-circle"></i> Enter Something. Anything. <i class="fas fa-exclamation-circle"></i></p>
+<p class="hidden-errors too-much-text"><i class="fas fa-exclamation-circle"></i> Too Much! <i class="fas fa-exclamation-circle"></i></p>
+        <form class="new-tweet-form">
+          <div class="submit-header">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+          </div>
+          <div class="submit-footer">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <div id="tweets-container">
+      </div>
+    </main>
   </body>
 </html>
+
+
+<!-- <section class="existing-tweets">
+  <header>
+    <div class="header-display">
+      <div class="name-icon">
+        <img src="https://i.imgur.com/73hZDYK.png" alt="Avatar Here">
+        <p>Bunbun</p>
+      </div>
+      <p class="name-handle">@PorkBun</p>
+    </div>
+    <div class="real-tweet">
+      <p>Everyone else is trash</p>
+    </div>
+    <div class="footer-display">
+      <span class="need_to_be_rendered" datetime="1461116232227">Date</span>
+      <div class="social-icons">
+        <i class="fas fa-flag"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="fas fa-heart"></i>
+      </div>
+    </div>
+  </header>
+</section>
+<section class="existing-tweets">
+  <header>
+    <div class="header-display">
+      <div class="name-icon">
+        <img src="https://i.imgur.com/73hZDYK.png" alt="Avatar Here">
+        <p>Bunbun</p>
+      </div>
+      <p class="name-handle">@PorkBun</p>
+    </div>
+    <div class="real-tweet">
+      <p>Everyone else is trash</p>
+    </div>
+    <div class="footer-display">
+      <span class="need_to_be_rendered" datetime="2020-07-07T09:24:17Z">Date</span>
+      <div class="social-icons">
+        <i class="fas fa-flag"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="fas fa-heart"></i>
+      </div>
+    </div>
+  </header>
+</section> -->
