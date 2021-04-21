@@ -16,6 +16,24 @@ $(document).ready(function() {
 
     $("form").find(".counter").val(remaining);
   });
+  
+  // $('body').click(function() {
+  //   console.log("#compose-new-tweet");
+  // });
+
+
+  //scroll to certain position in webpage, with focus on textarea
+  $("nav").find("p").click(function(event) {
+    // scroll to element i want 
+    if ($(window).width() < 1024) {
+      window.scrollTo(0, 400);
+    } else {
+      window.scrollTo(0, 0);
+    }
+    $("textarea").focus();
+    event.preventDefault();
+  });
+
 
 
   // submit new tweets

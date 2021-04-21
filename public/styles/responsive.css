@@ -3,7 +3,7 @@
   .page-header {
     width: 35%;
     float: left;
-    margin: 3em 0 0 2em;
+    margin: 7em 0 0 2em;
     position: fixed;
     top: 100px;
   }
@@ -14,4 +14,7 @@
     margin-top: 60px;
   }
 
+  .new-tweet {
+    margin-top: 3em;
+  }
 }
