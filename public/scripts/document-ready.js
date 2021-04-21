@@ -24,7 +24,7 @@ $(document).ready(function() {
 
   //scroll to certain position in webpage, with focus on textarea
   $("nav").find("p").click(function(event) {
-    // scroll to element i want 
+    // scroll to different positions based on media queries
     if ($(window).width() < 1024) {
       window.scrollTo(0, 400);
     } else {
