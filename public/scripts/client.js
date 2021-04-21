@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Function
+// create new tweet with proper html tags
 const createTweetElement = (tweetData) => {
   /* Your code for creating the tweet element */
   let name = tweetData["user"]["name"];
@@ -15,7 +15,7 @@ const createTweetElement = (tweetData) => {
 
   let $tweet = `<section class="existing-tweets">
     <header>
-      <div class="header-display">
+      <div class="header-footer">
         <div class="name-icon">
           <img src="${avatar}" alt="Avatar Here">
           <p>${name}</p>
@@ -25,7 +25,7 @@ const createTweetElement = (tweetData) => {
       <div class="real-tweet">
         <p>${escape(text)}</p>
       </div>
-      <div class="footer-display">
+      <div class="header-footer footer-additional">
         <span class="need_to_be_rendered" datetime="${createDate}">${createDate}</span>
         <div class="social-icons">
           <i class="fas fa-flag"></i>
@@ -51,21 +51,19 @@ const loadTweets = () => {
   $.get('/tweets', renderTweets);
 }
 
-//load and render latest tweet
-const renderLastTweet = function(tweets) {
-  let lastTweet = tweets[tweets.length -1];
-  $('#tweets-container').append(createTweetElement(lastTweet));
-};
 
+// Load and render latest tweet
 const loadLastTweet = () => {
-  $.get('/tweets', renderLastTweet);
+  $.get('/tweets', (tweets) => renderTweets([tweets[tweets.length - 1]]))
 }
 
+//post to backend
 const submitFormData = (form) => {
   let serializedForm = form.serialize();
   $.post('/tweets', serializedForm, loadLastTweet) 
 };
 
+// convert to plain string to avoid XSS
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));

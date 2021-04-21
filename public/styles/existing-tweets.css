@@ -1,3 +1,4 @@
+/* container for all tweets, reverse column for latest rendering first */
 #tweets-container {
   width: 100%;
   display: flex;
@@ -5,7 +6,6 @@
 }
 
 .existing-tweets {
-  width: 100%;
   border-style: solid;
   border-color: #545149;
   padding: 0.5em;
@@ -16,11 +16,18 @@
   box-shadow: 10px 10px skyblue;
 }
 
-.header-display {
+
+.header-footer {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.footer-additional {
+  align-items: center;
+  border-style: solid none none none;
+  border-color: #545149;
 }
 
 .name-icon {
@@ -28,14 +35,10 @@
   align-items: center;
 }
 
-.footer-display {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-style: solid none none none;
-  border-color: #545149;
+.name-handle {
+  opacity: 0.5;
+  font-weight: bold;
+  color: grey;
 }
 
 .social-icons {
@@ -46,8 +49,3 @@
   color: #d69900;
 }
 
-.name-handle {
-  opacity: 0.5;
-  font-weight: bold;
-  color: grey;
-}
