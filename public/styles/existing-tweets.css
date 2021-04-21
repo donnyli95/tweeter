@@ -49,3 +49,7 @@
   color: #d69900;
 }
 
+.overflow-text {
+  overflow-wrap: break-word;
+}
+

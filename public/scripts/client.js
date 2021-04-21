@@ -23,7 +23,7 @@ const createTweetElement = (tweetData) => {
         <p class="name-handle">${handle}</p>
       </div>
       <div class="real-tweet">
-        <p>${escape(text)}</p>
+        <p class="overflow-text">${escape(text)}</p>
       </div>
       <div class="header-footer footer-additional">
         <span class="need_to_be_rendered" datetime="${createDate}">${createDate}</span>
