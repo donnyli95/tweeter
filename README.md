@@ -6,10 +6,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Desktop View"](https://github.com/donnyli95/w3/blob/master/tinyapp/docs/newURL.png)
-!["Tablet View"](https://github.com/donnyli95/w3/blob/master/tinyapp/docs/notLoggedIn.png)
-!["Form Validaton Error"](https://github.com/donnyli95/w3/blob/master/tinyapp/docs/updateURL.png)
-!["New Tweet"](https://github.com/donnyli95/w3/blob/master/tinyapp/docs/urlIndex.png)
+!["Desktop View"](https://github.com/donnyli95/tweeter/blob/master/docs/desktop-view.png)
+!["Tablet View"](https://github.com/donnyli95/tweeter/blob/master/tinyapp/docs/tablet-view.png)
+!["Form Validaton Error"](https://github.com/donnyli95/tweeter/blob/master/tinyapp/docs/form-validation-error.png)
+!["New Tweet"](https://github.com/donnyli95/tweeter/blob/master/tinyapp/docs/new-tweet.png)
 
 ## Getting Started
 
