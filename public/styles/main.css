@@ -1,0 +1,228 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+main {
+  display: flex;
+  width: 100%;
+  padding: 0 5%;
+  background-color: #f4f1ec;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* container for all tweets, reverse column for latest rendering first */
+#tweets-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.existing-tweets {
+  border-style: solid;
+  border-color: #545149;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+.existing-tweets:hover {
+  box-shadow: 10px 10px skyblue;
+}
+
+.header-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-additional {
+  align-items: center;
+  border-style: solid none none none;
+  border-color: #545149;
+}
+
+.name-icon {
+  display: flex;
+  align-items: center;
+}
+
+.name-handle {
+  opacity: 0.5;
+  font-weight: bold;
+  color: grey;
+}
+
+.social-icons {
+  color: #4056A1;
+}
+
+.social-icons i:hover {
+  color: #d69900;
+}
+
+.overflow-text {
+  overflow-wrap: break-word;
+}
+
+.page-header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d69900;
+  background-image: url("../images/asfalt-light.png");
+  justify-content: space-between;
+  margin-top: 120px;
+}
+
+.last-name {
+  font-weight: 200;
+}
+
+h2 {
+  color: #FFFF;
+}
+
+.avatar-pic {
+  margin-top: 2em;
+  margin-bottom: -1.5em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee", sans-serif;
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFF;
+  position: fixed;
+  top: 0;
+  padding: 0 1.5em;
+  align-items: center;
+}
+
+.prompt-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Sans Pro", sans-serif;
+  align-items: center;
+}
+
+.double-down-arrow {
+  color: red;
+}
+
+.click-new-tweet {
+  color: #FFFF;
+  margin: 0 0;
+}
+
+.click-new-tweet:hover {
+  cursor: pointer;
+}
+
+.new-tweet {
+  color: #545149;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.title {
+  color: #545149;
+}
+
+.submit-footer {
+  font-family: "Bungee";
+}
+
+button {
+  background-color: #4056A1;
+  color: #FFFF;
+}
+
+.counter {
+  color: #545149;
+}
+
+.over140 {
+  color: red;
+}
+
+.submit-header {
+  border-style: none none solid none;
+  border-color: #545149;
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0;
+}
+
+label {
+  font-weight: 600;
+}
+
+textarea {
+  resize: none;
+  background-color: #f4f1ec;
+  outline: none;
+  border-color: transparent;
+}
+
+.hidden-errors {
+  display: none;
+  color: red;
+}
+
+.text-focus {
+  background-color: aliceblue;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .page-header {
+    width: 35%;
+    float: left;
+    margin: 5em 0 0 2em;
+    position: fixed;
+    top: 100px;
+  }
+
+  .container {
+    width: 60%;
+    float: right;
+    margin-top: 60px;
+  }
+
+  .new-tweet {
+    margin-top: 3em;
+  }
+}
